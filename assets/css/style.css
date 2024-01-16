@@ -17,8 +17,20 @@
  }
 #game-area {
     box-sizing: 60px 60px;
-    
+
+
 }
+
+
+#btn {
+    box-sizing: 3rem  2rem;
+    height: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+
+}
+
+
  div {
     background-color: beige;
     margin:10px 40px;
@@ -27,8 +39,8 @@
     text-align: center;
  }
 
+
  input {
     width: 3rem;
-    height: 2rem;
-   
+    height: 2rem;   
  }
