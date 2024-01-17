@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let btns = document.getElementsByClassName('btn');
     let NberTryOut = 5 ; 
     for (let  btn of  btns) {
-
         btn.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "reset") {   
-                let NberTryOut = 5 ;                        
+                NberTryOut = 5;                   
                 for (let i = 0; i < cpus.length; i++){
                     cpus[i].value =  Math.floor(Math.random() * 9) + 1;
                     
@@ -20,7 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                 NberTryOut -= 1; 
                 if (NberTryOut === 0 ) {
+                    NberTryOut = 5;
                     alert(`Awwww.... sorry you lost! click on reset to restart the game !`);
+                }
+                else if (NberTryOut > 5  && NberTryOut < 0){
+
+                    alert(`click on reset to restart the game !`);
                 }
                 else
                 {
@@ -38,7 +42,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function checkNumber(){
+    let plays = document.getElementsByClassName("ply");
+    let play =[];   
 
-    console.log('checking the number');
+    for (let i =0; i<5; i++){
+        play.push( parseInt(plays[i].value));        
+    }
+
+    console.log(play); 
 
 }
