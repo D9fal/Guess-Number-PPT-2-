@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let cpus = document.getElementsByClassName('cpu');
     for (let i = 0; i < cpus.length; i++){
         cpus[i].value =  Math.floor(Math.random() * 9) + 1;
-    
+        console.log(cpus[i]);    
     }
     
     
