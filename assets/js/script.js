@@ -42,13 +42,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function checkNumber(){
-    let plays = document.getElementsByClassName("ply");
-    let play =[];   
+    let plays = document.getElementsByClassName("ply");   
+    let cpus = document.getElementsByClassName("cpu");      
+    let play =[];
+    let cpu =[];   
 
     for (let i =0; i<5; i++){
-        play.push( parseInt(plays[i].value));        
+        play.push( parseInt(plays[i].value)); 
+        cpu.push( parseInt(cpus[i].value));        
     }
+    funct_compare(cpu,play);  
 
-    console.log(play); 
+}
 
+function funct_compare(cpu,play){
+
+    for (let i=0; i< 5; i++){        
+        if ((cpu[i]-play[i]) > 0 ){
+            console.log('first guess too small');
+        }else if ((cpu[i]-play[i]) < 0) {
+            console.log('first guess too big');
+        }
+        else 
+        {
+            console.log('Good guess');
+        }
+
+
+    }
 }
