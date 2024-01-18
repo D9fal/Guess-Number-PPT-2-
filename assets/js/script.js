@@ -57,8 +57,7 @@ function checkNumber(){
 }
 
 function funct_compare(cpu,play){
-    let label = document.getElementsByTagName('label');
-    console.log(cpu.equal(play))
+    let label = document.getElementsByTagName('label');    
     for (let i=0; i< 5; i++){        
         if ((cpu[i]-play[i]) > 0 ){
             console.log('guess too small');
