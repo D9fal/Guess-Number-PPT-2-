@@ -56,18 +56,20 @@ function checkNumber(){
 }
 
 function funct_compare(cpu,play){
-
+    let label = document.getElementsByTagName('label');
     for (let i=0; i< 5; i++){        
         if ((cpu[i]-play[i]) > 0 ){
-            console.log('first guess too small');
+            console.log('guess too small');
+            label[i].textContent = '<< ';
         }else if ((cpu[i]-play[i]) < 0) {
-            console.log('first guess too big');
+            console.log('guess too big');
+            label[i].textContent = '>>';
         }
         else 
         {
             console.log('Good guess');
+            label[i].textContent = '==';
         }
-
 
     }
 }
