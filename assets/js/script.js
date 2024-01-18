@@ -20,9 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 NberTryOut -= 1; 
                 if (NberTryOut === 0 ) {
                     NberTryOut = 5;
-                    alert(`Awwww.... sorry you lost! click on reset to restart the game !`);
+                    alert(`Awwww.... sorry you lost! click on Start/Reset to restart the game !`);
+
                 }
-                else if (NberTryOut > 5  && NberTryOut < 0){
+                else if (NberTryOut > 5  | NberTryOut < 0){
 
                     alert(`click on reset to restart the game !`);
                 }
@@ -57,19 +58,26 @@ function checkNumber(){
 
 function funct_compare(cpu,play){
     let label = document.getElementsByTagName('label');
+    console.log(cpu.equal(play))
     for (let i=0; i< 5; i++){        
         if ((cpu[i]-play[i]) > 0 ){
             console.log('guess too small');
-            label[i].textContent = '<< ';
+            label[i].textContent = '>> ';
         }else if ((cpu[i]-play[i]) < 0) {
             console.log('guess too big');
-            label[i].textContent = '>>';
+            label[i].textContent = '<<';
         }
         else 
         {
-            console.log('Good guess');
+            
             label[i].textContent = '==';
         }
 
     }
+
+   if (label[0].textContent===label[1].textContent === label[2].textContent ===label[3].textContent ===label[4].textContent){
+    alert(`Congratulations You Won!!!!    Click on Start/Reset to retart the game`);
+
+   }
+       
 }
