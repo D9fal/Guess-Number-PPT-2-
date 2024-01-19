@@ -74,7 +74,11 @@ function funct_compare(cpu,play){
 
     }
 
-   if (label[0].textContent===label[1].textContent === label[2].textContent ===label[3].textContent ===label[4].textContent){
+   if (  (label[0].textContent==='==') 
+      && (label[1].textContent==='==')
+      && (label[2].textContent==='==')
+      && (label[3].textContent==='==')
+      && (label[3].textContent==='==') ){
     alert(`Congratulations You Won!!!!    Click on Start/Reset to retart the game`);
 
    }
