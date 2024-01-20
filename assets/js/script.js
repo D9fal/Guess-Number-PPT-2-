@@ -1,29 +1,32 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
+let currentNumberArray = [];
+let cpus = [];
+
 document.addEventListener("DOMContentLoaded", function () {
-    let cpus = document.getElementsByClassName('cpu');
+    cpus = document.getElementsByClassName('cpu');
     let btns = document.getElementsByClassName('btn');
-    let NberTryOut = 5 ; 
+    let nberTryOut = 5 ; 
     for (let  btn of  btns) {
         btn.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "reset") {   
-                NberTryOut = 5;                   
+                nberTryOut = 5;                   
                 for (let i = 0; i < cpus.length; i++){
-                    cpus[i].value =  Math.floor(Math.random() * 9) + 1;
+                    currentNumberArray.push(Math.floor(Math.random() * 9) + 1);
                     
                 } 
-                
+                console.info(currentNumberArray);
             } 
             else 
             {
-                NberTryOut -= 1; 
-                if (NberTryOut === 0 ) {
-                    NberTryOut = 5;
+                nberTryOut -= 1; 
+                if (nberTryOut === 0 ) {
+                    nberTryOut = 5;
                     alert(`Awwww.... sorry you lost! click on Start/Reset to restart the game !`);
 
                 }
-                else if (NberTryOut > 5  | NberTryOut < 0){
+                else if (nberTryOut > 5  | nberTryOut < 0){
 
                     alert(`click on reset to restart the game !`);
                 }
@@ -43,20 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function checkNumber(){
-    let plays = document.getElementsByClassName("ply");   
-    let cpus = document.getElementsByClassName("cpu");      
+    let plays = document.getElementsByClassName("ply");      
     let play =[];
-    let cpu =[];   
 
     for (let i =0; i<5; i++){
         play.push( parseInt(plays[i].value)); 
-        cpu.push( parseInt(cpus[i].value));        
+       
     }
-    funct_compare(cpu,play);  
+    compareOptions(currentNumberArray, play);   
 
 }
 
-function funct_compare(cpu,play){
+function compareOptions(cpu,play){
     let label = document.getElementsByTagName('label');    
     for (let i=0; i< 5; i++){        
         if ((cpu[i]-play[i]) > 0 ){
@@ -68,7 +69,7 @@ function funct_compare(cpu,play){
         }
         else 
         {
-            
+            cpus[i].innerText = cpu[i]; 
             label[i].textContent = '==';
         }
 
