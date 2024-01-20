@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let  btn of  btns) {
         btn.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "reset") {   
-                nberTryOut = 5;                   
+                nberTryOut = 5;  
+                currentNumberArray = [];                 
                 for (let i = 0; i < cpus.length; i++){
-                    currentNumberArray.push(Math.floor(Math.random() * 9) + 1);
-                    
+                    currentNumberArray.push(Math.floor(Math.random() * 9) + 1);                    
                 } 
                 console.info(currentNumberArray);
             } 
@@ -24,24 +24,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (nberTryOut === 0 ) {
                     nberTryOut = 5;
                     alert(`Awwww.... sorry you lost! click on Start/Reset to restart the game !`);
-
+                    resetPlayerBox();
                 }
                 else if (nberTryOut > 5  | nberTryOut < 0){
-
-                    alert(`click on reset to restart the game !`);
+                    alert(`click on reset to restart the game !`);       
+                    resetPlayerBox();          
                 }
                 else
                 {
                     checkNumber();
-                }
-                
+                }               
 
             }
         });
-
     
-    }   
-
+    } 
     
 });
 
@@ -81,7 +78,18 @@ function compareOptions(cpu,play){
       && (label[3].textContent==='==')
       && (label[3].textContent==='==') ){
     alert(`Congratulations You Won!!!!    Click on Start/Reset to retart the game`);
-
+    resetPlayerBox();
    }
        
+}
+
+function resetPlayerBox(){
+    let plays = document.getElementsByClassName("ply");                    
+        for (let play of plays){                        
+            play.value = '0';                        
+        }
+        let cpus = document.getElementsByClassName("cpu");                    
+        for (let cpu of cpus){                        
+            cpu.textContent = 'X';                        
+        }
 }
