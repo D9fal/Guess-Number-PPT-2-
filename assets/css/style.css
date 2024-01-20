@@ -61,7 +61,7 @@
 
  input {
     width: 3rem;
-    height: 2rem;   
+    height: 3rem;   
  }
 
 /* Media query: iPad pro and larger (540px and up) */
@@ -82,10 +82,29 @@
     }
 }
 
+/* Media query: iPad pro and larger (912px and up) */
+@media screen and (min-width: 912px) {
+
+    .game-area{
+        left: 260px;
+    }
+}
+
+
+
 /* Media query: iPad pro and larger (1024px and up) */
 @media screen and (min-width: 1024px) {
 
     .game-area{
         left: 310px;
+    }
+}
+
+
+/* Media query: iPad pro and larger (1280px and up) */
+@media screen and (min-width: 1280px) {
+
+    .game-area{
+        left: 450px;
     }
 }
