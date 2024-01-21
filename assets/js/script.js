@@ -88,8 +88,13 @@ function resetPlayerBox(){
         for (let play of plays){                        
             play.value = '0';                        
         }
-        let cpus = document.getElementsByClassName("cpu");                    
-        for (let cpu of cpus){                        
-            cpu.textContent = 'X';                        
+    let cpus = document.getElementsByClassName("cpu");                    
+    for (let cpu of cpus){                        
+        cpu.textContent = 'X';                        
         }
+    let lbls = document.getElementsByTagName("label");                    
+    for (let lbl of lbls){                        
+        lbl.textContent = '--';                        
+    }
+
 }
