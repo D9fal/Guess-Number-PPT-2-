@@ -57,11 +57,9 @@ function checkNumber(){
 function compareOptions(cpu,play){
     let label = document.getElementsByTagName('label');    
     for (let i=0; i< 5; i++){        
-        if ((cpu[i]-play[i]) > 0 ){
-            console.log('guess too small');
+        if ((cpu[i]-play[i]) > 0 ){            
             label[i].textContent = '>> ';
-        }else if ((cpu[i]-play[i]) < 0) {
-            console.log('guess too big');
+        }else if ((cpu[i]-play[i]) < 0) {            
             label[i].textContent = '<<';
         }
         else 
