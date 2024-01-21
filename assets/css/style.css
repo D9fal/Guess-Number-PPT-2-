@@ -130,3 +130,11 @@
         left: 450px;
     }
 }
+
+/* Media query: iPad pro and larger (1480px and up) */
+@media screen and (min-width: 1480px) {
+
+    .game-area{
+        left: 800px;
+    }
+}
