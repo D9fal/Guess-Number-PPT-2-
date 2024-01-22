@@ -97,6 +97,7 @@ function compareOptions(cpu,play){
     n+=1;
     resetPlayerBox();
     displayScore();
+    resetFlag = 0;
     
    }
        

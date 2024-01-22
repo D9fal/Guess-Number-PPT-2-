@@ -55,6 +55,9 @@
     
   }
   
+  #icon {
+    font-size:xxx-large;
+  }
 #digits{
     display: block;
     margin-top: 15px;
