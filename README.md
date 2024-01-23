@@ -16,8 +16,8 @@ The live link can be found here - [Game_Guess_5](https://d9fal.github.io/Guess-N
 
 - ### First time user
   - As a first time user I want to understand the main purpose of the game.   
-  - As a first time user I want to able to have positive experience therefore the game should not be too difficult. 
-  - As a first time user I want to be able to connect to the colors used in the game. 
+  - As a first time user I want to able to have positive experience therefore the game should give a clear path to win. 
+  - As a first time user I want to be able to connect to connect 
 
 - ### Returning User
   - As a returning user I want to easily save the score at the end of the game and return to improve the score.  

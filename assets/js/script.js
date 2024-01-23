@@ -81,27 +81,32 @@ function compareOptions(cpu,play){
         }
         else 
         {
-            cpus[i].innerText = cpu[i]; 
             label[i].textContent = '==';
+            cpus[i].innerText = cpu[i]; 
+            
         }
 
     }
 
-   if (  (label[0].textContent==='==') 
-      && (label[1].textContent==='==')
-      && (label[2].textContent==='==')
-      && (label[3].textContent==='==')
-      && (label[4].textContent==='==') 
-      && (resetFlag === 1 )           ){
-    alert(`Congratulations You Won!!!!    Click on Start/Reset to retart the game`);
-    n+=1;
-    resetPlayerBox();
-    displayScore();
-    resetFlag = 0;
-    
-   }
-       
+    win(label);
 }
+
+function win (label){
+
+   if (  (label[0].textContent === '==') 
+      && (label[1].textContent === '==')
+      && (label[2].textContent === '==')
+      && (label[3].textContent === '==')
+      && (label[4].textContent === '==') 
+      && (resetFlag === 1 )           ){
+        n+=1;
+        alert(`Congratulations You Won!!!!    Click on Start/Reset to retart the game`);    
+        resetPlayerBox();
+        displayScore();
+        resetFlag = 0;
+    }
+}        
+
 
 function resetPlayerBox(){
     let plays = document.getElementsByClassName("ply");                    
