@@ -43,6 +43,23 @@ Raleway is the main font in the game. This font was imported via [Google Fonts](
 
 ## Wireframes
 
+ Wireframes were produced using Balsamiq.
+
+ <details>
+ 
+ <summary>Desktop Wireframe</summary> 
+ 
+   ![Desktop Wireframe](assets/)
+
+</details>
+ <details>
+ 
+ <summary>Mobile Wireframe</summary>
+ 
+   ![Desktop Wireframe](assets/)
+
+</details>
+
 ## Features
    - Score section is designed to show first the name of the game (with quick desription/objectives) and the score table. 
 
@@ -65,11 +82,11 @@ Raleway is the main font in the game. This font was imported via [Google Fonts](
     * [w3w css Validator Results](https://jigsaw.w3.org/css-validator/validator)
 * JS
     * No Errors were returned using jshint checker.
-    *  - [W3C Validator Results](https://jshint.com/)
+    * [W3C Validator Results](https://jshint.com/)
 
 * Accessibility
   
-  ![](assets/docs/readme_images/Assessibilty.png)
+  ![](assets/docs/readme_images/assessibilty.png)
 
   
 The accessibility score is 100% showing that colors and fonts offers a good contrast. It is the result of searching on google.com colors combinations for game design. 
@@ -117,6 +134,7 @@ The live link is [Hausarztpraxis](https://d9fal.github.io/Guess-Number-PPT-2-/)
 - [Am I Responsive](https://amiresponsive.co.uk/) - Used to verify responsiveness of website on different devices.
 - [Google Fonts](https://fonts.google.com/) - Used to import and alter fonts on the page.
 - [Font Awesome](https://fontawesome.com/) - Used for icons in footer.
+- [Balsamiq](https://balsamiq.com/) - Used to generate Wireframe images.
 
 
 
