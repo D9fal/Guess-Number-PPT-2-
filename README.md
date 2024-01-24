@@ -49,14 +49,14 @@ Raleway is the main font in the game. This font was imported via [Google Fonts](
  
  <summary>Desktop Wireframe</summary> 
  
-   ![Desktop Wireframe](assets/)
+   ![Desktop Wireframe](./assets/docs/readme_images/desktopwireframe.png)
 
 </details>
  <details>
  
  <summary>Mobile Wireframe</summary>
  
-   ![Desktop Wireframe](assets/)
+   ![Desktop Wireframe](./assets/docs/readme_images/mobilewireframe.png)
 
 </details>
 
