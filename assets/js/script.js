@@ -3,8 +3,8 @@
 
 let currentNumberArray = [];
 let cpus = [];
-let n = 0;
-let m = 0;
+let nberGameWon = 0;
+let nberGamePlayed = 0;
 let resetFlag = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     currentNumberArray.push(Math.floor(Math.random() * 9) + 1);                    
                 } 
                 console.info(currentNumberArray);
+                document.getElementById('submit').classList.remove('disabled');
+                document.getElementById("submit").disabled = false;
             } 
             else 
             {
@@ -29,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (nberTryOut === 0 && resetFlag === 1) {
                     nberTryOut = 5;
                     alert(`Awwww.... sorry you lost! click on Start/Reset to restart the game !`);
-                    n-=1;
+                    nberGameWon-=1;
                     resetPlayerBox();
                     displayScore();
                     resetFlag = 0;
@@ -42,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 else
                 {
                     if (resetFlag === 1){
-                        m+=1;
+                        nberGamePlayed+=1;
                         checkNumber();                       
                     } else {
                         alert(`click on Reset/Restart!!!  .. to submit your guess!`);
@@ -96,17 +98,20 @@ function compareOptions(cpu,play){
 
 function win (){
     let label = document.getElementsByTagName('label'); 
-    if ( (label[0].textContent === '==') 
-      && (label[1].textContent === '==')
-      && (label[2].textContent === '==')
-      && (label[3].textContent === '==')
-      && (label[4].textContent === '==') 
-      && (resetFlag === 1 )           ){
-        n+=1;
-        alert(`Congratulations You Won!!!!    Click on Start/Reset to retart the game`);    
-        resetPlayerBox();
-        displayScore();
-        resetFlag = 0;
+    if ( (label[0].textContent === '==') &&
+       (label[1].textContent === '==') &&
+       (label[2].textContent === '==') &&
+       (label[3].textContent === '==') &&
+       (label[4].textContent === '==') &&
+       (resetFlag === 1 )           ){
+        nberGameWon+=1;
+        setTimeout(()=>{
+            alert(`Congratulations You Won!!!!    Click on Start/Reset to retart the game`);    
+            resetPlayerBox();
+            displayScore();
+            resetFlag = 0;
+        }, 1500);
+       
     }
 }        
 
@@ -123,11 +128,13 @@ function resetPlayerBox(){
     for (let lbl of lbls){                        
         lbl.textContent = '--';                        
     }
+    document.getElementById('submit').classList.add('disabled');
+    document.getElementById("submit").disabled = true;
 
 }
 
 function displayScore(){
     let score = document.getElementById('score');
-    score.textContent= `You scored:  ${n} out of ${m}`;
+    score.textContent= `You scored:  ${nberGameWon} out of ${nberGamePlayed}`;
 
 }

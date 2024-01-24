@@ -1,4 +1,4 @@
- /* Google fonts import */
+/* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
  /*  wildcard selector Asterix used to override  default styles added by the browser */
@@ -76,7 +76,10 @@
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-
+.disabled{
+    background-color: gray;
+    cursor: not-allowed;
+}
 
 
  div {
