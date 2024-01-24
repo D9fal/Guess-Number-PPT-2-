@@ -1,5 +1,5 @@
 # Game Guess 5 
-The game is 5 digits game. the number comprised between 0 -9 for beguinner. in the next version we will add options to increase the choices to  0 - 20  for average players  and  to 0 - 50 / 0 - 100 for experts players. It is designed to help teens with lagical thinking. A player must use the following hints ">>" and "<< " to predict their next guess. If used properly a player should be able to narrow down the right guess in a maximum of 4 attempt.  
+The game is 5 digits guessing game. On start the player has to enter an initial guess number between 0 -9 in each of the 5 inputs. The player will have a total of  4 chances to find the winning number. The score table shows the number of win compared to the number of submission. In this first version we will limited the guess from 0 - 9 . in the next version we will add options to increase the choices to  0 - 20  for average players  and  to 0 - 50 / 0 - 100 for experts players. It is designed to help teens with lagical thinking. A player must use the following hints ">>" and "<< " to predict their next guess. If used properly a player should be able to narrow down the right guess in a maximum of 4 attempt.  
 
 The live link can be found here - [Game_Guess_5](https://d9fal.github.io/Guess-Number-PPT-2-/)
 
