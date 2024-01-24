@@ -4,11 +4,10 @@
  /*  wildcard selector Asterix used to override  default styles added by the browser */
 
  * {
-     padding: 0;
-     margin: 0;
-     box-sizing: 0;
- }
-
+    padding : 0;
+    margin : 0;
+    }
+    
  /* General Style*/
  
  body {

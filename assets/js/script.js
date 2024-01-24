@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     displayScore();
                     resetFlag = 0;
                 }
-                else if ((nberTryOut > 5  | nberTryOut < 0) && resetFlag === 1){
+                else if ((nberTryOut > 5  || nberTryOut < 0) && resetFlag === 1){
                     alert(`click on reset to restart the game !`);   
                     resetPlayerBox();  
                     resetFlag = 0;      
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         m+=1;
                         checkNumber();                       
                     } else {
-                        alert(`click on Reset/Restart!!!  .. to submit your guess!`)
+                        alert(`click on Reset/Restart!!!  .. to submit your guess!`);
                     }
                     
                     

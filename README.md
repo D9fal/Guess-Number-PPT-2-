@@ -49,12 +49,30 @@ Raleway is the main font in the game. This font was imported via [Google Fonts](
 ![](assets/docs/readme_images/head-score-area.png)
 
    - The game area section is where the player interact with the GUI. It comprised the hidden winning Number , the "Entre Your Guess" section  and THe hint bar . The "Submit your Guess" and "Start/Reset" are at the bottom  of the game area.  
-   
+
 ![](assets/docs/readme_images/game-area.png)
 
 
 ## Testing
+
 ### Validator Testing
+
+* HTML
+  * No errors were returned using W3C html Validator
+    * [w3w html Validator Results](https://validator.w3.org/nu/#textarea)
+* CSS
+  * No errors were returned using W3C css Validator
+    * [w3w css Validator Results](https://jigsaw.w3.org/css-validator/validator)
+* JS
+    * 
+    *
+
+* Accessibility
+  
+  ![](assets/readme-docs/other-images/performance.png)
+
+  
+The accessibility score is 85% showing that pictures colors and fonts offers a good contrast. I think i can improve it by reducing the size of the pictures. 
 ### Form Testing
 ### Links Testing
 ### Browser Testing
