@@ -76,24 +76,27 @@ function compareOptions(cpu,play){
     for (let i=0; i< 5; i++){        
         if ((cpu[i]-play[i]) > 0 ){            
             label[i].textContent = '>> ';
-        }else if ((cpu[i]-play[i]) < 0) {            
+        }
+        
+        else if ((cpu[i]-play[i]) < 0) {            
             label[i].textContent = '<<';
         }
-        else 
+
+        else if ((cpu[i]-play[i]) === 0)
         {
             label[i].textContent = '==';
-            cpus[i].innerText = cpu[i]; 
+            cpus[i].innerText = cpu[i];   
             
-        }
-
+        }        
     }
-
-    win(label);
+    
+    win();
+    
 }
 
-function win (label){
-
-   if (  (label[0].textContent === '==') 
+function win (){
+    let label = document.getElementsByTagName('label'); 
+    if ( (label[0].textContent === '==') 
       && (label[1].textContent === '==')
       && (label[2].textContent === '==')
       && (label[3].textContent === '==')
@@ -106,7 +109,6 @@ function win (label){
         resetFlag = 0;
     }
 }        
-
 
 function resetPlayerBox(){
     let plays = document.getElementsByClassName("ply");                    

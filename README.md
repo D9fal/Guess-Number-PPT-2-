@@ -29,11 +29,30 @@ The live link can be found here - [Game_Guess_5](https://d9fal.github.io/Guess-N
 
 
 ## Design
+
 ### Imagery
+
+No imagery is used in this project. We are still searching for a good picture to bring the user interest and keep him motivated while playing.
 ### Colours
+
+The color scheme of the game is orange, green and blue providing a good balance between keep the player engaged and relaxed. 
+
 ### Fonts
+
+Raleway is the main font in the game. This font was imported via [Google Fonts](https://fonts.google.com/) . I'm using Sans Serif as a backup font, in case for any reason the main font isn't being imported into the site correctly.
+
 ## Wireframes
+
 ## Features
+   - Score section is designed to show first the name of the game (with quick desription/objectives) and the score table. 
+
+![](assets/docs/readme_images/head-score-area.png)
+
+   - The game area section is where the player interact with the GUI. It comprised the hidden winning Number , the "Entre Your Guess" section  and THe hint bar . The "Submit your Guess" and "Start/Reset" are at the bottom  of the game area.  
+   
+![](assets/docs/readme_images/game-area.png)
+
+
 ## Testing
 ### Validator Testing
 ### Form Testing
