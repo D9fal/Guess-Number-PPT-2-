@@ -81,7 +81,7 @@ Raleway is the main font in the game. This font was imported via [Google Fonts](
   * No errors were returned using W3C css Validator
     * [w3w css Validator Results](https://jigsaw.w3.org/css-validator/validator)
 * JS
-    * No Errors were returned using jshint checker.
+  * No Errors were returned using jshint checker.
     * [W3C Validator Results](https://jshint.com/)
 
 * Accessibility
@@ -104,7 +104,17 @@ The accessibility score is 100% showing that colors and fonts offers a good cont
  - The Game and documentation were reviewed by Friends and family members to point out any bugs and/or user experience issues. I received suggestion on other combition of colors. 
 
 ## Bugs
- - During the programming, errors and bugs were dealt with as it progress. google chrome dev tool "inspect" was used. We are planning to design a serie of test for the website. 
+ During the programming, errors and bugs were dealt with as it progress:
+ -     
+  google chrome dev tool "inspect" was used. 
+
+### Fixed Bugs
+
+- When I first implemented the winning numbers section, I used inputs of type text but it was difficult to hide the values or textContents. I decicided to use paragraphs elements and was be able to use the textContent attribute to hanble the function.
+
+- In case of a win: the Alert ('') message happens before the GUI update the label values. the function setTimeout() was introduced to hold the alert message until the Gui is updated.
+
+- While checking/validating the Java script, I was surpised by all the warnings related to the versions of the JS and the Alert messages. I will read about that later on. 
 
 ## Teshnologies Used
 - HTML5
